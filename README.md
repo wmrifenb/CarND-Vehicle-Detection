@@ -38,7 +38,7 @@ from LaneDetection import *
 
 ### Histogram of Oriented Gradients
 
-The following two cells define a color conversion function that we use to transform the color of classification trainging images and the HOG image feature vector function.
+The following two cells define a color conversion function that we use to transform the color of classifier training images and the HOG image feature vector function.
 
 
 
@@ -119,7 +119,7 @@ for idx, file in enumerate(cars_subsample):
 
 ## Color Features
 
-The following cells define the functions to create featue vectors based on spatial binning and color histograms of a window image
+The following cells define the functions to create feature vectors based on spatial binning and color histograms of a window image
 
 
 ```python
@@ -476,7 +476,7 @@ for idx, file in enumerate(test_images):
 ![png](output_16_5.png)
 
 
-The following cell defines the function 'process_frame'. This function makes use of the python list name 'heatmaps' which stores the heatmaps for several previous frames to the current frame being evaluated in the video data being processed. The process image function will add all of the heat maps in the list together and then threshold the summed heat map to eliminate spurious detections that only ocassionaly appear with respect to time.
+The following cell defines the function 'process_frame'. This function makes use of the python list name 'heatmaps' which stores the heatmaps for several previous frames to the current frame being evaluated in the video data being processed. The process_frame function will add all of the heat maps in the list together and then threshold the summed heat map to eliminate spurious detections that only ocasionally appear with respect to time.
 
 The process frame function also superimposes the lane detection from the CarND-Lane-Detection project.
 

@@ -3,21 +3,6 @@
 
 ### William Rifenburgh
 
----
-
-The goals / steps of this project are the following:
-
-* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
-* Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. 
-* Note: for those first two steps don't forget to normalize your features and randomize a selection for training and testing.
-* Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
-* Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
-* Estimate a bounding box for vehicles detected.
-
----
-
-
-
 ```python
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
@@ -587,7 +572,7 @@ To speed the image processing up, we could use fewer elements in the feature vec
 
 To help deal with false positives I could pour through the video and single out the windowed regions that were false positives and add them back into the noncar training data set several times over to make sure they are identified as non-car windows.
 
-As with most machine learning approaches, having the algorithm encounter something it has never seen before will likely cause false positives are negatives. Something as odd as an art car or the oscar-meyer wiener mobile may prove to be undetectable by the SVC. A possible solution may be to incorporate other data such as in sensor fusion or searching for vehicle license plates may help with such cases.
+As with most machine learning approaches, having the algorithm encounter something it has never seen before will likely cause false positives and negatives. Something as odd as an art car or the oscar-meyer wiener mobile may prove to be undetectable by the SVC. A possible solution may be to incorporate other data such as in sensor fusion or searching for vehicle license plates may help with such cases.
 
 
 
